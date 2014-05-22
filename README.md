@@ -1,29 +1,38 @@
-liferay-rest-consumer
-=====================
+# liferay-rest-consumer
 
-This example liferay application is consuming REST service from https://github.com/sammso/simple-jersey (so you need that too)
+This example liferay application is consuming REST service from https://github.com/sammso/simple-jersey (so you need that project too).
+
+Configure address of this REST service to your portal-ext.properties.
+
+``` properties
+rest-consumer-portlet.target=http://localhost:8080/simple-jersey
+```
 
 It is example how to use ServiceBuilder to consume REST services.
 
-You can also use create Service from web content template:
+You can also use create Service from web content template to fetch web-content:
 
 ``` velocity
-\#set ($noteService = $utilLocator.findUtil("rest-consumer-portlet","org.liferay.portlet.restconsumer.service.NoteLocalService"))
+#set ($noteService = $utilLocator.findUtil("rest-consumer-portlet","org.liferay.portlet.restconsumer.service.NoteLocalService"))
 
-\#set ($list = $noteService.findNotes())
+#set ($list = $noteService.findNotes())
 
-&lt;h1&gt;Portlet Rest integration for Web content&lt;/h1&gt;
+<h1>Portlet Rest integration for Web content</h1>
 
-&lt;table&gt;
-	&lt;thead&gt;
-		&lt;tr&gt;&lt;th&gt;ID&lt;/th&gt;&lt;th&gt;Title&lt;/th&gt;&lt;th&gt;Body&lt;/th&gt;&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
+<table>
+	<thead>
+		<tr><th>ID</th><th>Title</th><th>Body</th></tr>
+	</thead>
+	<tbody>
 
-\#foreach( $note in $list )
-    &lt;tr&gt;&lt;td&gt;$note.getId()&lt;/td&gt;&lt;td&gt;$note.getTitle()&lt;/td&gt;&lt;td&gt;$note.getBody()&lt;/td&gt;&lt;/tr&gt;
-\#end
+#foreach( $note in $list )
+    <tr><td>$note.getId()</td><td>$note.getTitle()</td><td>$note.getBody()</td></tr>
+#end
 
-	&lt;/tbody&gt;
-&lt;/table&gt;
+	</tbody>
+</table>
 ```
+
+To build you need maven or Liferay Developer Studio
+
+mvn package should be enough and then /rest-consumer/rest-consumer-portlet should contain file to be deployed to Liferay.
