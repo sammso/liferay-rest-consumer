@@ -7,10 +7,10 @@ It is example how to use ServiceBuilder to consume REST services.
 
 You can also use create Service from web content template:
 
-------------
-#set ($noteService = $utilLocator.findUtil("rest-consumer-portlet","org.liferay.portlet.restconsumer.service.NoteLocalService"))
+``` velocity
+\#set ($noteService = $utilLocator.findUtil("rest-consumer-portlet","org.liferay.portlet.restconsumer.service.NoteLocalService"))
 
-#set ($list = $noteService.findNotes())
+\#set ($list = $noteService.findNotes())
 
 &lt;h1&gt;Portlet Rest integration for Web content&lt;/h1&gt;
 
@@ -20,10 +20,10 @@ You can also use create Service from web content template:
 	&lt;/thead&gt;
 	&lt;tbody&gt;
 
-#foreach( $note in $list )
+\#foreach( $note in $list )
     &lt;tr&gt;&lt;td&gt;$note.getId()&lt;/td&gt;&lt;td&gt;$note.getTitle()&lt;/td&gt;&lt;td&gt;$note.getBody()&lt;/td&gt;&lt;/tr&gt;
-#end
+\#end
 
 	&lt;/tbody&gt;
 &lt;/table&gt;
-------------
+```
