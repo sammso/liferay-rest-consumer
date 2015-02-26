@@ -1,6 +1,6 @@
 package org.liferay.portlet.restconsumer.service.base;
 
-import org.liferay.portlet.restconsumer.service.NoteLocalServiceUtil;
+import org.liferay.portlet.restconsumer.service.NoteServiceUtil;
 
 import java.util.Arrays;
 
@@ -8,15 +8,17 @@ import java.util.Arrays;
  * @author Brian Wing Shun Chan
  * @generated
  */
-public class NoteLocalServiceClpInvoker {
+public class NoteServiceClpInvoker {
     private String _methodName16;
     private String[] _methodParameterTypes16;
     private String _methodName17;
     private String[] _methodParameterTypes17;
     private String _methodName20;
     private String[] _methodParameterTypes20;
+    private String _methodName21;
+    private String[] _methodParameterTypes21;
 
-    public NoteLocalServiceClpInvoker() {
+    public NoteServiceClpInvoker() {
         _methodName16 = "getBeanIdentifier";
 
         _methodParameterTypes16 = new String[] {  };
@@ -28,25 +30,38 @@ public class NoteLocalServiceClpInvoker {
         _methodName20 = "findNotes";
 
         _methodParameterTypes20 = new String[] {  };
+
+        _methodName21 = "addNote";
+
+        _methodParameterTypes21 = new String[] {
+                "org.liferay.portlet.restconsumer.service.Note"
+            };
     }
 
     public Object invokeMethod(String name, String[] parameterTypes,
         Object[] arguments) throws Throwable {
         if (_methodName16.equals(name) &&
                 Arrays.deepEquals(_methodParameterTypes16, parameterTypes)) {
-            return NoteLocalServiceUtil.getBeanIdentifier();
+            return NoteServiceUtil.getBeanIdentifier();
         }
 
         if (_methodName17.equals(name) &&
                 Arrays.deepEquals(_methodParameterTypes17, parameterTypes)) {
-            NoteLocalServiceUtil.setBeanIdentifier((java.lang.String) arguments[0]);
+            NoteServiceUtil.setBeanIdentifier((java.lang.String) arguments[0]);
 
             return null;
         }
 
         if (_methodName20.equals(name) &&
                 Arrays.deepEquals(_methodParameterTypes20, parameterTypes)) {
-            return NoteLocalServiceUtil.findNotes();
+            return NoteServiceUtil.findNotes();
+        }
+
+        if (_methodName21.equals(name) &&
+                Arrays.deepEquals(_methodParameterTypes21, parameterTypes)) {
+            NoteServiceUtil.addNote((org.liferay.portlet.restconsumer.service.Note) arguments[0]);
+
+            return null;
         }
 
         throw new UnsupportedOperationException();

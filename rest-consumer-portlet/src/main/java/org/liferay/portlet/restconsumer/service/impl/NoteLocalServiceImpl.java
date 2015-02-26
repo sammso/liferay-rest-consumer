@@ -56,7 +56,7 @@ public class NoteLocalServiceImpl extends NoteLocalServiceBaseImpl {
 
 		Gson gson = new Gson();
 
-		Type noteListType = new TypeToken<List<NoteImpl>>() {
+		Type noteListType = new TypeToken<List<Note>>() {
 		}.getType();
 
 		return gson.fromJson(json, noteListType);
@@ -64,6 +64,8 @@ public class NoteLocalServiceImpl extends NoteLocalServiceBaseImpl {
 
 	private static URI getBaseURI() {
 		String uri = PropsUtil.get("rest-consumer-portlet.target");
+		
+		uri = uri!=null ? uri : "http://localhost:8080/simple-jersey";
 		
 		return UriBuilder.fromUri(uri)
 				.build();

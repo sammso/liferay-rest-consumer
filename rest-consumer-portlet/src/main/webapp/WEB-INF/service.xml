@@ -2,6 +2,6 @@
 
 <service-builder package-path="org.liferay.portlet.restconsumer">
 	<namespace>rest</namespace>
-	<entity name="Note" uuid="false" local-service="true" remote-service="false">
+	<entity name="Note" uuid="false" local-service="true" remote-service="true">
 	</entity>
 </service-builder>
