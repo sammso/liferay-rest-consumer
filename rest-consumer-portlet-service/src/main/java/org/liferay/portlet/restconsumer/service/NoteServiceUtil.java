@@ -60,6 +60,12 @@ public class NoteServiceUtil {
         getService().addNote(note);
     }
 
+    public static com.liferay.portal.model.User getCurrentUser()
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException {
+        return getService().getCurrentUser();
+    }
+
     public static void clearService() {
         _service = null;
     }

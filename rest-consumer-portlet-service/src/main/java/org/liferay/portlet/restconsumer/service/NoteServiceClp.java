@@ -16,6 +16,8 @@ public class NoteServiceClp implements NoteService {
     private String[] _methodParameterTypes3;
     private String _methodName4;
     private String[] _methodParameterTypes4;
+    private String _methodName5;
+    private String[] _methodParameterTypes5;
 
     public NoteServiceClp(InvokableService invokableService) {
         _invokableService = invokableService;
@@ -37,6 +39,10 @@ public class NoteServiceClp implements NoteService {
         _methodParameterTypes4 = new String[] {
                 "org.liferay.portlet.restconsumer.service.Note"
             };
+
+        _methodName5 = "getCurrentUser";
+
+        _methodParameterTypes5 = new String[] {  };
     }
 
     @Override
@@ -122,5 +128,36 @@ public class NoteServiceClp implements NoteService {
                     " is not a valid exception");
             }
         }
+    }
+
+    @Override
+    public com.liferay.portal.model.User getCurrentUser()
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException {
+        Object returnObj = null;
+
+        try {
+            returnObj = _invokableService.invokeMethod(_methodName5,
+                    _methodParameterTypes5, new Object[] {  });
+        } catch (Throwable t) {
+            t = ClpSerializer.translateThrowable(t);
+
+            if (t instanceof com.liferay.portal.kernel.exception.PortalException) {
+                throw (com.liferay.portal.kernel.exception.PortalException) t;
+            }
+
+            if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
+                throw (com.liferay.portal.kernel.exception.SystemException) t;
+            }
+
+            if (t instanceof RuntimeException) {
+                throw (RuntimeException) t;
+            } else {
+                throw new RuntimeException(t.getClass().getName() +
+                    " is not a valid exception");
+            }
+        }
+
+        return (com.liferay.portal.model.User) ClpSerializer.translateOutput(returnObj);
     }
 }
