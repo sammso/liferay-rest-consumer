@@ -10,6 +10,10 @@ rest-consumer-portlet.target=http://localhost:8080/simple-jersey
 
 It is example how to use ServiceBuilder to consume REST services.
 
+If you want to use this with OAuth authentication please try: 
+
+https://github.com/mikakoivisto/simple-oauth-consumer
+
 # Examples:
 
 ## Integrating to WebContent
