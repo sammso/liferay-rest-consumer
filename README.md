@@ -45,7 +45,7 @@ You can also use create Service from web content template to fetch web-content:
 
 **To test you can just Copy paste to browser:**
 
-`http://<your domain>:8080/api/jsonws/invoke?cmd=<json here>`
+`http://<your domain and port>/api/jsonws/invoke?cmd=<json here>`
 
 **All the notes:**
 
