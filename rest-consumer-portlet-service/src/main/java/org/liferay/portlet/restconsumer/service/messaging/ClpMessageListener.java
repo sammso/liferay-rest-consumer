@@ -4,6 +4,7 @@ import com.liferay.portal.kernel.messaging.BaseMessageListener;
 import com.liferay.portal.kernel.messaging.Message;
 
 import org.liferay.portlet.restconsumer.service.ClpSerializer;
+import org.liferay.portlet.restconsumer.service.LimitCheckServiceUtil;
 import org.liferay.portlet.restconsumer.service.NoteLocalServiceUtil;
 import org.liferay.portlet.restconsumer.service.NoteServiceUtil;
 
@@ -20,6 +21,7 @@ public class ClpMessageListener extends BaseMessageListener {
 
         if (command.equals("undeploy") &&
                 servletContextName.equals(getServletContextName())) {
+            LimitCheckServiceUtil.clearService();
             NoteLocalServiceUtil.clearService();
 
             NoteServiceUtil.clearService();

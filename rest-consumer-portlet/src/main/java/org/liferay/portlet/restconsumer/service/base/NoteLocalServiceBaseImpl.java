@@ -27,6 +27,8 @@ import javax.sql.DataSource;
  */
 public abstract class NoteLocalServiceBaseImpl extends BaseLocalServiceImpl
     implements NoteLocalService, IdentifiableBean {
+    @BeanReference(type = org.liferay.portlet.restconsumer.service.LimitCheckService.class)
+    protected org.liferay.portlet.restconsumer.service.LimitCheckService limitCheckService;
     @BeanReference(type = org.liferay.portlet.restconsumer.service.NoteLocalService.class)
     protected org.liferay.portlet.restconsumer.service.NoteLocalService noteLocalService;
     @BeanReference(type = org.liferay.portlet.restconsumer.service.NoteService.class)
@@ -50,6 +52,25 @@ public abstract class NoteLocalServiceBaseImpl extends BaseLocalServiceImpl
      *
      * Never modify or reference this class directly. Always use {@link org.liferay.portlet.restconsumer.service.NoteLocalServiceUtil} to access the note local service.
      */
+
+    /**
+     * Returns the limit check remote service.
+     *
+     * @return the limit check remote service
+     */
+    public org.liferay.portlet.restconsumer.service.LimitCheckService getLimitCheckService() {
+        return limitCheckService;
+    }
+
+    /**
+     * Sets the limit check remote service.
+     *
+     * @param limitCheckService the limit check remote service
+     */
+    public void setLimitCheckService(
+        org.liferay.portlet.restconsumer.service.LimitCheckService limitCheckService) {
+        this.limitCheckService = limitCheckService;
+    }
 
     /**
      * Returns the note local service.
