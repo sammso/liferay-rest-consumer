@@ -1,0 +1,134 @@
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="date" fieldNamespace="ddm" indexType="" localizable="false" name="submitDate" readOnly="true" repeatable="false" required="true" showLabel="true" type="ddm-date" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Submit Date]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="double" fieldNamespace="ddm" indexType="" localizable="false" name="amount" readOnly="true" repeatable="false" required="true" showLabel="true" type="ddm-decimal" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Amount]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="" localizable="false" multiple="false" name="currency" readOnly="true" repeatable="false" required="false" showLabel="false" type="select" width="">
+		<dynamic-element name="option8350" type="option" value="EUR">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[€]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option8351" type="option" value="USD">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[$]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Currency]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[["EUR"]]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="html" fieldNamespace="ddm" indexType="" localizable="false" name="description" readOnly="true" repeatable="false" required="true" showLabel="true" type="ddm-text-html" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Description]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="" localizable="false" name="attachment" readOnly="true" repeatable="true" required="true" showLabel="true" type="ddm-documentlibrary" width="">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Attachment]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="" localizable="false" name="review1comments" readOnly="true" repeatable="false" required="false" showLabel="true" type="textarea" width="small">
+		<dynamic-element dataType="date" fieldNamespace="ddm" indexType="keyword" localizable="true" name="reviewDate" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-date" width="small">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Review Date]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Review 1 comments]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="" localizable="false" name="managerComments" readOnly="false" repeatable="false" required="false" showLabel="true" type="textarea" width="small">
+		<dynamic-element dataType="date" fieldNamespace="ddm" indexType="keyword" localizable="true" name="managerDate" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-date" width="small">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Manager Date]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Manager comments]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>
