@@ -4,4 +4,6 @@
 	<namespace>rest</namespace>
 	<entity name="Note" uuid="false" local-service="true" remote-service="true">
 	</entity>
+	<entity name="LimitCheck" uuid="false" local-service="false" remote-service="true">
+	</entity>	
 </service-builder>
